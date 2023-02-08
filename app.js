@@ -47,11 +47,12 @@ app.get('/random-beer', async (req, res) => {
 });
 app.get('/beer/:id', async (req, res) => {
   try {
-    const response = await punkAPI.getBeer(45);
+    const response = await punkAPI.getBeer(req.params.id);
     const ingredients = response[0].ingredients;
+
     const malt = ingredients.malt.map(item => item.name).join(', ');
     const hops = ingredients.hops.map(item => item.name).join(', ');
-    console.log('hola', malt);
+
     res.render('beer.hbs', {
       beer: response[0],
       ingredients: { malt: malt, hops: hops }
