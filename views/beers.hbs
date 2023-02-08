@@ -1,6 +1,9 @@
-<ul>
+<ul class="beers-container">
     {{#each this.beers}}
     <li>
+        <a href="/beer/{{this.id}}">
+            <img class="beers-images" src="{{this.image_url}}" alt="cervezita" />
+        </a>
         {{>beerpartial this}}
     </li>
     {{/each}}
