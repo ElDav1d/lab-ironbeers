@@ -5,3 +5,36 @@ dark-blue: #0a2c42;
 grey: #bfbfbf;
 font-family: Arial, Helvetica, sans-serif;
 */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color: #2081c3;
+  color: #f7f9f9;
+  width: 100%;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: #f7f9f9;
+}
+.navigation-list {
+  display: flex;
+  padding: 1.5rem 3rem;
+}
+.navigation-list a {
+  margin-right: 1rem;
+}
+footer {
+  background-color: #0a2c42;
+  color: #f7f9f9;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 0 1rem;
+}
