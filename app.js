@@ -45,5 +45,20 @@ app.get('/random-beer', async (req, res) => {
     console.log(error);
   }
 });
+app.get('/beer/:id', async (req, res) => {
+  try {
+    const response = await punkAPI.getBeer(45);
+    const ingredients = response[0].ingredients;
+    const malt = ingredients.malt.map(item => item.name).join(', ');
+    const hops = ingredients.hops.map(item => item.name).join(', ');
+    console.log('hola', malt);
+    res.render('beer.hbs', {
+      beer: response[0],
+      ingredients: { malt: malt, hops: hops }
+    });
+  } catch (error) {
+    console.log(error);
+  }
+});
 
 app.listen(3000, () => console.log('🏃‍ on port 3000'));
