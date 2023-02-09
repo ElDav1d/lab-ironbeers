@@ -1,13 +1,9 @@
 <section>
     <img class="beer-image" src="{{this.beer.image_url}}" alt="cervezita" />
-
     <article>
         {{>beerpartial this.beer}}
-
         <h3>Ingredients: </h3>
-        <p>Malt: {{this.ingredients.malt}}</p>
-        <p>Hops: {{this.ingredients.hops}}</p>
-
+        <p><b>Malt: </b>{{this.ingredients.malt}}</p>
+        <p><b>Hops: </b>{{this.ingredients.hops}}</p>
     </article>
-
 </section>

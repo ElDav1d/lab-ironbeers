@@ -1,13 +1,8 @@
 <section>
-
-    <a href="/beer/{{this.beer.id}}">
-        <img class="beer-image" src="{{this.beer.image_url}}" alt="cervezita" />
-    </a>
+    {{>imagelinkpartial this.beer}}
     <article>
         {{>beerpartial this.beer}}
-
-        <p>{{this.beer.food_pairing}}</p>
-        <p>{{this.beer.brewers_tips}}</p>
-
+        <p><b>Food pairing: </b>{{this.beer.food_pairing}}</p>
+        <p><b>Brewer tips: </b>{{this.beer.brewers_tips}}</p>
     </article>
 </section>
